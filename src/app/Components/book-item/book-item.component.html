@@ -1,0 +1,8 @@
+<section class="item-book" (click)="navigateToID()"> <!-- Se activa al hacer clic para navegar al
+    detalle del libro -->
+    <p id="id">{{item.id}}</p> <!-- Muestra el identificador único del libro -->
+    <div class="description"> <!-- Contenedor para la descripción -->
+        <h2>Titulo: {{item.title}}</h2> <!-- Muestra el título del libro -->
+        <p id="author">Autor: {{item.author}}</p> <!-- Muestra el autor del libro -->
+    </div>
+</section>

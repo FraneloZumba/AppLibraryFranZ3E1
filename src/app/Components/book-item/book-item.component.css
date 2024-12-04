@@ -1,0 +1,47 @@
+/* Estilo para el contenedor de cada item de libro */
+.item-book {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Muestra el cursor como puntero cuando se hace clic */
+  }
+  
+  .item-book:hover {
+    transform: translateY(-5px); /* Eleva ligeramente el item al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+  }
+  
+  /* Estilo para el ID del libro */
+  .item-book #id {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff; /* Color azul para el ID */
+    margin-bottom: 10px;
+  }
+  
+  /* Contenedor de la descripción del libro */
+  .description {
+    margin-top: 10px;
+  }
+  
+  /* Estilo para el título del libro */
+  .item-book h2 {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  /* Estilo para el autor del libro */
+  .item-book #author {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  

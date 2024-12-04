@@ -1,0 +1,7 @@
+/* Aplica la fuente Montserrat a todo el cuerpo de la aplicación */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /* Puedes cambiar a otro peso si lo deseas, como 700 */
+  font-style: normal;  /* Estilo de fuente */
+}
