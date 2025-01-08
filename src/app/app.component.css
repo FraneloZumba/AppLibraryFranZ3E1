@@ -1,6 +1,18 @@
-.body {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-  }
+/* Aplica la fuente Montserrat a todo el cuerpo de la aplicación */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /* Ajusta el peso de la fuente */
+  font-style: normal;
+  background-color: #333; /* Color de fondo oscuro */
+  color: white; /* Color de texto blanco */
+}
+
+/* También puedes personalizar más elementos como los encabezados o el texto en Ionic */
+ion-header {
+  background-color: #333; /* Fondo oscuro para el header */
+}
+
+ion-title {
+  color: white; /* Título en color blanco */
+}

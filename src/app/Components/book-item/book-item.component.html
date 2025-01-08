@@ -1,8 +1,11 @@
-<section class="item-book" (click)="navigateToID()"> <!-- Se activa al hacer clic para navegar al
-    detalle del libro -->
-    <p id="id">{{item.id}}</p> <!-- Muestra el identificador único del libro -->
-    <div class="description"> <!-- Contenedor para la descripción -->
-        <h2>Titulo: {{item.title}}</h2> <!-- Muestra el título del libro -->
-        <p id="author">Autor: {{item.author}}</p> <!-- Muestra el autor del libro -->
-    </div>
-</section>
+<ion-card (click)="navigateToID()"> <!-- IonCard para crear un diseño de tarjeta -->
+  <ion-card-header>
+    <ion-card-subtitle>ID: {{ item.id }}</ion-card-subtitle> <!-- Muestra el ID del producto -->
+    <ion-card-title>{{ item.title }}</ion-card-title> <!-- Muestra el título del producto -->
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-img [src]="item.imageUrl" alt="{{ item.title }}"></ion-img> <!-- Imagen del producto -->
+    <p>${{ item.price }}</p> <!-- Precio del producto -->
+  </ion-card-content>
+</ion-card>

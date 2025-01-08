@@ -1,11 +1,22 @@
-<div class="detail-book">
-    <section class="item-book">
-      <!-- Información detallada del libro -->
-      <p id="id">ID: {{ bookSelected.id }}</p>
-      <h2>Título: {{ bookSelected.title }}</h2>
-      <p id="author">Autor: {{ bookSelected.author }}</p>
-    </section>
-    <!-- Botón para regresar a la página principal -->
-    <button (click)="gotoHome()">Regresar</button>
-  </div>
-  
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Libro</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="gotoHome()">Regresar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="detail-book">
+    <ion-card-header>
+      <ion-card-title>{{ bookSelected.title }}</ion-card-title>
+      <ion-card-subtitle>Precio: ${{ bookSelected.price }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img [src]="bookSelected?.imageUrl" alt="{{ bookSelected?.title }}" class="book-image"/>
+      <p>ID: {{ bookSelected.id }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

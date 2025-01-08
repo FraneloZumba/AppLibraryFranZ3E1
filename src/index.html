@@ -3,17 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Activated Route</title>
+  <title>ADIBAS SMASNUG</title>
+  
+  <!-- Base href para rutas -->
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Metaetiquetas necesarias para una aplicación móvil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="theme-color" content="#3880ff"> <!-- Color de la barra de estado de móviles -->
+
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Conexión a Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Manifesto para PWA (si quieres convertirlo en una Progressive Web App) -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Agregar script de Ionic (si no está manejado por npm) -->
+  <script src="https://unpkg.com/@ionic/core@5.9.1/dist/ionic.js"></script>
 </head>
 
 <body>
+  <!-- Contenedor principal de la aplicación Angular -->
   <app-root></app-root>
 </body>
 

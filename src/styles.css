@@ -2,6 +2,39 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
-  font-weight: normal; /* Puedes cambiar a otro peso si lo deseas, como 700 */
-  font-style: normal;  /* Estilo de fuente */
+  font-weight: normal;
+  font-style: normal;
+  --ion-font-family: 'Montserrat', sans-serif; /* Configuración para Ionic */
+}
+
+header {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Ajuste de tamaño de fuente para el encabezado en Ionic */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Estilos para imágenes dentro de elementos .item */
+.item img {
+  width: 100%;         /* Ajuste al 100% de ancho disponible */
+  max-width: 214px;    /* Ancho máximo */
+  height: 236px;       /* Alto fijo de 236px */
+  object-fit: cover;   /* Asegura que la imagen cubra el área sin deformarse */
+  border-radius: 8px;  /* Bordes redondeados opcionales */
+  margin-bottom: 10px; /* Espaciado inferior si es necesario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para imagen */
+}
+
+/* Puedes agregar estilos de Ionic para ciertos elementos, por ejemplo, botones */
+ion-button {
+  --background: #3880ff; /* Color de fondo personalizado */
+  --color: white;        /* Color del texto */
+  --border-radius: 8px;  /* Bordes redondeados */
 }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Adibas Smasnug</string>
+    <string name="title_activity_main">Adibas Smasnug</string>
+    <string name="package_name">com.uets.myapp</string>
+    <string name="custom_url_scheme">com.uets.myapp</string>
+</resources>

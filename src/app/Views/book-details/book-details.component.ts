@@ -2,12 +2,15 @@ import { Component, inject } from '@angular/core'; // Importación de decoradore
 import { ActivatedRoute, Router } from '@angular/router'; // Para manejar rutas activas y navegación.
 import { IBook } from '../../Models/book.mode'; // Interfaz para el modelo de datos del libro.
 import { BookService } from '../../Services/book.service'; // Servicio para obtener los libros.
+import { NavController } from '@ionic/angular'; // Importar NavController de Ionic.
+import { IonicModule } from '@ionic/angular'; // Asegúrate de importar IonicModule
 
 @Component({
-  selector: 'app-book-detail', // Nombre del selector del componente.
-  templateUrl: './book-details.component.html', // Archivo HTML para la plantilla.
-  styleUrls: ['./book-details.component.css'], // Archivo CSS para los estilos.
-  standalone: true, // Indica que este componente es independiente.
+  selector: 'app-book-detail',
+  templateUrl: './book-details.component.html',
+  styleUrls: ['./book-details.component.css'],
+  standalone: true,
+  imports: [IonicModule], // Agregar IonicModule a los imports
 })
 export class BookDetailComponent {
   // Propiedad para almacenar el libro seleccionado.
@@ -17,6 +20,7 @@ export class BookDetailComponent {
   private route = inject(Router);
   private activatedRoute = inject(ActivatedRoute);
   private bookService = inject(BookService);
+  private navController = inject(NavController); // Inyección de NavController
 
   constructor() {
     // Subscríbete a los parámetros de la ruta activa.
@@ -40,6 +44,6 @@ export class BookDetailComponent {
 
   // Método para regresar a la página principal.
   gotoHome(): void {
-    this.route.navigate(['']);
+    this.navController.navigateBack('/'); // Usando NavController para regresar a la página principal
   }
 }
