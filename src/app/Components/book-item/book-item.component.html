@@ -1,11 +1,8 @@
-<ion-card (click)="navigateToID()"> <!-- IonCard para crear un diseño de tarjeta -->
-  <ion-card-header>
-    <ion-card-subtitle>ID: {{ item.id }}</ion-card-subtitle> <!-- Muestra el ID del producto -->
-    <ion-card-title>{{ item.title }}</ion-card-title> <!-- Muestra el título del producto -->
-  </ion-card-header>
-
-  <ion-card-content>
-    <ion-img [src]="item.imageUrl" alt="{{ item.title }}"></ion-img> <!-- Imagen del producto -->
-    <p>${{ item.price }}</p> <!-- Precio del producto -->
-  </ion-card-content>
-</ion-card>
+<section class="item-book" (click)="navigateToID()"> <!-- Se activa al hacer clic para navegar al detalle del producto -->
+  <p id="id">{{item.id}}</p> <!-- Muestra el identificador único del producto -->
+  <div class="description"> <!-- Contenedor para la descripción -->
+    <img [src]="item.imageUrl" alt="{{item.title}}" /> <!-- Muestra la imagen del producto -->
+    <h2>{{item.title}}</h2> <!-- Muestra el título del producto -->
+    <p id="author">${{item.price}}</p> <!-- Muestra la marca del producto -->
+  </div>
+</section>
