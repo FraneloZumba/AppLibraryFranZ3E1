@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core'; // Importación de utilidades de Angular.
 import { ActivatedRoute, Router } from '@angular/router'; // Manejo de rutas dinámicas.
+import { IonicModule } from '@ionic/angular'; // Importación de IonicModule.
 
 @Component({
   selector: 'app-not-found', // Selector del componente.
   templateUrl: './not-found.component.html', // Ruta de la plantilla HTML.
   styleUrls: ['./not-found.component.css'], // Ruta del archivo de estilos.
   standalone: true, // Indica que este componente es independiente.
+  imports: [IonicModule], // Incluye IonicModule.
 })
 export class NotFoundComponent {
   // Almacena el ID que no fue encontrado.

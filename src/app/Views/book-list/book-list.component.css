@@ -5,7 +5,7 @@
   gap: 20px;
   justify-content: center;
   padding: 20px;
-  background-color: #f4f4f4; /* Fondo más claro para el contenedor */
+  background-color: #f4f4f4;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -49,8 +49,48 @@ app-book-item {
 
 /* Mejorar la visibilidad y presentación de imágenes si las hay */
 .item img {
-  width: 100%;
-  height: auto;
+  width: 300px; /* Tamaño fijo de 300px */
+  height: 300px; /* Tamaño fijo de 300px */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+/* Media Query para pantallas pequeñas (<= 600px) */
+@media (max-width: 600px) {
+  .list-books {
+    padding: 10px;
+  }
+
+  .item {
+    width: 100%; /* Ocupa el 100% del ancho */
+    padding: 15px;
+  }
+
+  .item h3 {
+    font-size: 1rem;
+  }
+
+  .item p {
+    font-size: 0.9rem;
+  }
+
+  /* Asegurarse que las imágenes se mantengan fijas en 300px x 300px */
+  .item img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Media Query para pantallas medianas (<= 1024px) */
+@media (max-width: 1024px) {
+  .item {
+    width: 45%; /* Ajuste el ancho de los items */
+  }
+
+  /* Asegurarse que las imágenes se mantengan fijas en 300px x 300px */
+  .item img {
+    width: 300px;
+    height: 300px;
+  }
 }

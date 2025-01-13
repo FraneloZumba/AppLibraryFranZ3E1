@@ -1,8 +1,10 @@
-<section class="item-book" (click)="navigateToID()"> <!-- Se activa al hacer clic para navegar al detalle del producto -->
-  <p id="id">{{item.id}}</p> <!-- Muestra el identificador único del producto -->
-  <div class="description"> <!-- Contenedor para la descripción -->
-    <img [src]="item.imageUrl" alt="{{item.title}}" /> <!-- Muestra la imagen del producto -->
-    <h2>{{item.title}}</h2> <!-- Muestra el título del producto -->
-    <p id="author">${{item.price}}</p> <!-- Muestra la marca del producto -->
-  </div>
-</section>
+<ion-card (click)="navigateToID()">
+  <ion-card-header>
+    <ion-card-subtitle>{{ item.id }}</ion-card-subtitle>
+    <ion-card-title>{{ item.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <img [src]="item.imageUrl" alt="{{ item.title }}" />
+    <p id="author">${{ item.price }}</p>
+  </ion-card-content>
+</ion-card>

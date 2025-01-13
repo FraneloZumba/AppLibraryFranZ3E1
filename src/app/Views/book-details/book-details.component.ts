@@ -2,12 +2,14 @@ import { Component, inject } from '@angular/core'; // Importación de decoradore
 import { ActivatedRoute, Router } from '@angular/router'; // Para manejar rutas activas y navegación.
 import { IBook } from '../../Models/book.mode'; // Interfaz para el modelo de datos del libro.
 import { BookService } from '../../Services/book.service'; // Servicio para obtener los libros.
+import { IonicModule } from '@ionic/angular'; // Importación del módulo de Ionic.
 
 @Component({
   selector: 'app-book-detail', // Nombre del selector del componente.
   templateUrl: './book-details.component.html', // Archivo HTML para la plantilla.
   styleUrls: ['./book-details.component.css'], // Archivo CSS para los estilos.
   standalone: true, // Indica que este componente es independiente.
+  imports: [IonicModule], // Incluye IonicModule.
 })
 export class BookDetailComponent {
   // Propiedad para almacenar el libro seleccionado.

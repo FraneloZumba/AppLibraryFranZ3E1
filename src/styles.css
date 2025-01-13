@@ -3,9 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
-  /* Puedes cambiar a otro peso si lo deseas, como 700 */
   font-style: normal;
-  /* Estilo de fuente */
 }
 
 header {
@@ -22,9 +20,37 @@ header h1 {
 }
 
 .item img {
-  width: 214px;     /* Ancho fijo de 214px */
-  height: 236px;    /* Alto fijo de 236px */
+  width: 300px; /* Tamaño fijo de 300px */
+  height: 300px; /* Tamaño fijo de 300px */
   object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
-  border-radius: 8px; /* Bordes redondeados opcionales */
-  margin-bottom: 10px; /* Espaciado inferior si es necesario */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Media Query para pantallas pequeñas (<= 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Reduce el tamaño de fuente */
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Ajusta el tamaño del título */
+  }
+
+  .item img {
+    width: 300px; /* Tamaño fijo de 300px */
+    height: 300px; /* Tamaño fijo de 300px */
+  }
+}
+
+/* Media Query para pantallas medianas (<= 1024px) */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2.2rem; /* Ajuste intermedio del tamaño del título */
+  }
+
+  .item img {
+    width: 300px; /* Tamaño fijo de 300px */
+    height: 300px; /* Tamaño fijo de 300px */
+  }
 }

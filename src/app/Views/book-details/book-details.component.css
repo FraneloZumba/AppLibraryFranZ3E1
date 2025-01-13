@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px;
-  background-color: #f9f9f9; /* Fondo más claro para el contenedor */
+  background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
@@ -45,7 +45,7 @@ button {
   padding: 10px 20px;
   font-size: 1rem;
   color: white;
-  background-color: #007bff; /* Azul para el fondo del botón */
+  background-color: #007bff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -59,4 +59,60 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+/* Mejorar la visibilidad y presentación de imágenes si las hay */
+.item-book img {
+  width: 300px;  /* Tamaño fijo de 300px */
+  height: 300px; /* Tamaño fijo de 300px */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Media Query para pantallas pequeñas (<= 600px) */
+@media (max-width: 600px) {
+  .detail-book {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #author {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Mantener las imágenes de tamaño fijo en pantallas pequeñas */
+  .item-book img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Media Query para pantallas medianas (<= 1024px) */
+@media (max-width: 1024px) {
+  .detail-book {
+    max-width: 500px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  #author {
+    font-size: 1.1rem;
+  }
+
+  /* Mantener las imágenes de tamaño fijo en pantallas medianas */
+  .item-book img {
+    width: 300px;
+    height: 300px;
+  }
 }

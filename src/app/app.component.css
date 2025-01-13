@@ -1,7 +1,7 @@
 .body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: normal; /* o usa bold, 400, 700, dependiendo del peso deseado */
   font-style: normal;
   background-color: #333; /* Color de fondo oscuro */
   color: white; /* Color de texto blanco */

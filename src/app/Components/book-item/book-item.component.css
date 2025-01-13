@@ -44,3 +44,56 @@
   color: #555;
   margin: 5px 0;
 }
+
+/* Estilo para las imágenes de los productos */
+.item-book img {
+  width: 300px;    /* Tamaño fijo de 300px */
+  height: 300px;   /* Tamaño fijo de 300px */
+  object-fit: cover;  /* Asegura que la imagen se ajuste sin deformarse */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Media Query para pantallas pequeñas (<= 600px) */
+@media (max-width: 600px) {
+  .item-book {
+    padding: 15px;
+    margin: 8px 0;
+  }
+
+  .item-book h2 {
+    font-size: 1.4rem;
+  }
+
+  .item-book #author {
+    font-size: 1rem;
+  }
+
+  /* Asegura que las imágenes sigan siendo de 300px x 300px en pantallas pequeñas */
+  .item-book img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Media Query para pantallas medianas (<= 1024px) */
+@media (max-width: 1024px) {
+  .item-book {
+    padding: 18px;
+    margin: 9px 0;
+  }
+
+  .item-book h2 {
+    font-size: 1.5rem;
+  }
+
+  .item-book #author {
+    font-size: 1.1rem;
+  }
+
+  /* Asegura que las imágenes sigan siendo de 300px x 300px en pantallas medianas */
+  .item-book img {
+    width: 300px;
+    height: 300px;
+  }
+}
