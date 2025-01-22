@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { IBook } from '../Models/book.mode';
 
 @Injectable({
-  providedIn: 'root', // Hace que el servicio esté disponible en toda la aplicación.
+  providedIn: 'root',
 })
 export class BookService {
-  // Lista estática de productos como ejemplo.
   private listaLibros: IBook[] = [
     { 
       id: 1, 
@@ -51,7 +50,7 @@ export class BookService {
     },
     { 
       id: 8, 
-      title: 'Tablet 10" HD', 
+      title: 'Tablet 10\" HD', 
       price: 199.99,
       imageUrl: 'https://i.redd.it/fluff-cursed-ipad-mini-1-cellular-on-ios-6-1-3-v0-x49gtjiy5oz81.jpg?width=3024&format=pjpg&auto=webp&s=22f9ab7dc7e1d517adf5845c3557244b4605519e' 
     },
@@ -71,21 +70,11 @@ export class BookService {
 
   constructor() {}
 
-  /**
-   * Obtiene todos los productos.
-   * @returns Lista de productos (IBook[]).
-   */
   getBooks(): IBook[] {
-    return this.listaLibros; // Retorna la lista de productos.
+    return this.listaLibros;
   }
 
-  /**
-   * Busca un producto por su ID.
-   * @param id Identificador del producto.
-   * @returns Un producto (IBook) o 'undefined' si no existe.
-   */
   getBookById(id: number): IBook | undefined {
-    // Itera por la lista de productos y compara el ID.
-    return this.listaLibros.find(product => product.id === id); // Retorna el producto si lo encuentra.
+    return this.listaLibros.find(product => product.id === id);
   }
 }

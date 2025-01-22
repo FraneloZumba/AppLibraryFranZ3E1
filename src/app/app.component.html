@@ -1,9 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ADIBAS SMASNUG</ion-title> <!-- Título principal -->
+    <ion-title>ADIBAS SMASNUG</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navigateToCart()">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <router-outlet></router-outlet> <!-- Punto de anclaje para las vistas -->
+  <router-outlet />
 </ion-content>

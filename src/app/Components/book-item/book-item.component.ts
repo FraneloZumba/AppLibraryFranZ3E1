@@ -1,20 +1,26 @@
-import { Component, inject, Input } from '@angular/core';
-import { IBook } from '../../Models/book.mode';
-import { Router } from '@angular/router'; // Solo necesitas Router aquí.
-import { IonicModule } from '@ionic/angular'; // Importación añadida.
+import { Component, Input } from '@angular/core';
+import { IBook } from '../../Models/book.mode'; // Asegúrate de que la ruta sea correcta
+import { CartService } from '../../Services/cart.service'; // Asegúrate de que la ruta sea correcta
+import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular'; // Importa el módulo de Ionic
 
 @Component({
-  selector: 'app-book-item', // 🏷️ Selector para usar este componente en plantillas.
-  imports: [IonicModule], // 📜 Lista de módulos importados (incluye IonicModule).
-  templateUrl: './book-item.component.html', // 🖼️ Plantilla HTML para este componente.
-  styleUrl: './book-item.component.css' // 🎨 Estilo CSS específico del componente.
+  selector: 'app-book-item',
+  standalone: true, // Standalone component
+  imports: [IonicModule], // Importa módulos de Ionic
+  templateUrl: './book-item.component.html',
+  styleUrls: ['./book-item.component.css'],
 })
 export class BookItemComponent {
-  route = inject(Router); // 🚀 Inyección de dependencia para la navegación.
-  @Input() item!: IBook; // 📖 Propiedad de entrada que representa un libro.
+  @Input() item!: IBook;
+
+  constructor(private cartService: CartService, private route: Router) { }
+
+  addToCart(item: IBook): void {
+    this.cartService.addToCart(item); // Llamar al servicio para agregar el item
+  }
 
   navigateToID() {
-    // 🌟 Navega a la ruta específica del libro según su ID.
     this.route.navigate(['books', this.item.id]);
   }
 }

@@ -23,4 +23,9 @@ export const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full',
   },
+
+  {
+    path: 'cart',
+    loadComponent: () => import('./Views/cart/cart.component').then((m) => m.CartComponent),
+  },
 ];

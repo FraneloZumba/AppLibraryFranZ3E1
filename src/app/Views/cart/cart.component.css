@@ -1,0 +1,11 @@
+ion-content {
+    padding: 20px;
+}
+
+ion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+ion-button {
+    margin: 5px 0;
+}
